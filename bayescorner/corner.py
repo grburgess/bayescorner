@@ -1,7 +1,8 @@
-from bayescorner.compute_sigma_level import compute_sigma_level
+from .compute_sigma_level import compute_sigma_level
 from betagen import betagen
 import matplotlib.pyplot as plt
 import numpy as np
+
 wine='#8F2727'
 
 def bayescorner(params, param_names, truth=None, color_base=wine):
