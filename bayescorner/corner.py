@@ -5,7 +5,7 @@ import numpy as np
 
 wine='#8F2727'
 
-def bayescorner(params, param_names, truth=None, color_base=wine):
+def bayescorner(params, param_names, truth=None, color_base=wine,figsize=(10,10)):
     """FIXME! briefly describe function
 
     :param params: 
@@ -22,7 +22,7 @@ def bayescorner(params, param_names, truth=None, color_base=wine):
     n_params = len(params)
     assert n_params == len(param_names)
 
-    fig, axes = plt.subplots(n_params, n_params + 1, figsize=(10, 10), sharex=False)
+    fig, axes = plt.subplots(n_params, n_params + 1, figsize=figsize, sharex=False)
     for col in range(n_params + 1):
         for row in range(n_params):
 
