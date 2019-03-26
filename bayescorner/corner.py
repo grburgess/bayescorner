@@ -5,7 +5,7 @@ import numpy as np
 
 wine='#8F2727'
 
-def bayescorner(params, param_names, truth=None, color_base=wine,figsize=(10,10)):
+def bayescorner(params, param_names, truth=None, color_base=wine,figsize=(10,10), colors=[]):
     """FIXME! briefly describe function
 
     :param params: 
@@ -17,8 +17,26 @@ def bayescorner(params, param_names, truth=None, color_base=wine,figsize=(10,10)
 
     """
 
-    dark, dark_highlight, mid, mid_highlight, light, light_highlight = betagen(color_base)
 
+    if not colors:
+
+    
+        dark, dark_highlight, mid, mid_highlight, light, light_highlight = betagen(color_base)
+
+
+    else:
+
+        assert len(colors) == 3, 'must have three colors'
+
+        dark = colors[0]
+        dark_highlight = colors[0]
+
+        mid = colors[1]
+        mid_highlight = colors[1]
+
+        light = colors[2]
+        light_highlight = colors[2]
+        
     n_params = len(params)
     assert n_params == len(param_names)
 
